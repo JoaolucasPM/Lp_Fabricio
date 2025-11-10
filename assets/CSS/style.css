@@ -1,109 +1,445 @@
-body {
-  background:
-    linear-gradient(179.03deg, rgba(0, 0, 0, 0.3) 3.38%, #141414 99.16%),
-    url(../IMG/fundo.jpg) center 17% / cover no-repeat fixed;
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900&display=swap');
+
+/* ===== RESET ===== */
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===== BODY ===== */
+body {
+  font-family: 'Aeonik', sans-serif;
+  background:
+    linear-gradient(179deg, rgba(0, 0, 0, 0.3) 3.38%, #141414 99.16%),
+    url('../IMG/UC_fundo.jpg') center 17% / cover no-repeat fixed;
   min-height: 100vh;
-  font-family: 'Poppins', sans-serif;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ===== TEXTOS ===== */
+h1,
+h2,
+p {
+  font-weight: 400;
+  background: linear-gradient(to right, #fff, #999);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+h1 {
+  font-size: clamp(2rem, 5vw, 4.25rem);
+  line-height: 1.1;
+}
+
+p {
+  font-size: clamp(1rem, 2vw, 1.75rem);
+  line-height: 1.5;
+}
+
+/* ajuste específico do texto interno da caixa PG1/PG2 */
+#caixaPG1B p,
+#caixaPG2 p {
+  padding-bottom: 20px;
+}
+
+/* ===== IMAGENS ===== */
+img.imgPG1 {
+  width: clamp(200px, 40vw, 520px);
+  height: auto;
+}
+
+img.imgPG2 {
+  width: clamp(80px, 12vw, 130px);
+  height: auto;
+}
+
+/* ===== BOTÃO ===== */
+button {
+  background: linear-gradient(to right, #d1ad6d, #ffc45c);
+  color: #121212;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 28px;
+  font-family: inherit;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: linear-gradient(to right, #ffc45c, #d1ad6d);
+}
+
+/* ===== LAYOUT PG1 ===== */
+/* paiPG1 (antes #pai) */
+#paiPG1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  padding: 10px;
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.infoTextPG1 {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  min-height: 100vh;
+  padding-bottom: 60px;
+}
+
+/* Caixa PG1 específicas */
+#caixaPG1A img.imgPG1 {
+  display: block;
+  max-width: 100%;
+}
+
+#caixaPG1B {
+  /* mantém comportamento idêntico */
+}
+
+/* ===== LAYOUT PG2 ===== */
+.infoTextPG2 {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 0;
+}
+
+/* caixaPG2 */
+#paiPG2 #caixaPG2 {
+  text-align: center;
+}
+
+#caixaPG2 h1 {
+  padding-bottom: 20px;
+  margin: auto;
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  width: 70%;
+}
+
+#caixaPG2 p {
+  padding-bottom: 50px;
+  margin: auto;
+  font-size: clamp(1rem, 2vw, 1.1rem);
+}
+
+/* ===== CARDS (PÁGINA 2) ===== */
+/* containerPG2 (antes .container) */
+.containerPG2 {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+  gap: 20px;
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* cardPG2 (antes .card) */
+.cardPG2 {
+  flex: 1 1 250px;
+  background: linear-gradient(180deg, #2a2a2a 0%, #0c0c0c 100%);
+  opacity: 0.7;
+  border: 1px solid #505050;
+  border-radius: 30px;
+  padding: 40px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+
+.cardPG2:hover {
+  transform: translateY(-8px);
+  opacity: 0.85;
+}
+
+.imgBoxPG2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.imgBoxPG2 img {
+  max-width: 90px;
+  height: auto;
+}
+
+.contentBoxPG2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+}
+
+.contentBoxPG2 h2 {
+  font-size: 1.4em;
+  letter-spacing: 2px;
+  color: white;
+}
+
+.contentBoxPG2 p {
+  font-size: 0.95em;
+  line-height: 1.4;
+}
+
+/* ===== PÁGINA 3 - topo ===== */
+.infoTextPG3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  height: 50vh;
+  /* mantém tela cheia */
+  padding: 0;
+  /* remove o padding superior */
+  margin: 0;
+  /* remove margens que causam scroll */
+  overflow: hidden;
+  /* impede o scroll vertical extra */
+  position: relative;
+  /* mantém a posição para .decorationPG3 */
+}
+
+.containerPG3 {
+  text-align: left;
+  max-width: 800px;
+  position: relative;
+  padding: 5% 20px 0;
+  /* aplica espaçamento interno sem expandir altura total */
+}
+
+.logoPG3 {
+  font-size: 14px;
+  color: #ccc;
+  margin-bottom: 20px;
+  font-family: 'Aeonik', sans-serif;
+}
+
+.containerPG3>h1 {
+  font-size: 2.7rem;
+  padding-bottom: 20px;
+}
+
+.containerPG3>p {
+  font-size: 1.2rem;
+  padding-bottom: 10px;
+}
+
+/* decorationPG3 */
+.decorationPG3 {
+  position: absolute;
+  right: 100px;
+  top: 25%;
+  transform: translateY(-50%);
+}
+
+.decorationPG3 img {
+  max-height: 60vh;
+  object-fit: contain;
+}
+
+/* ===== GALERIA (PÁGINA 3) ===== */
+/* containerGaleriaPG3 (antes .container3 or .container) */
+.containerGaleriaPG3 {
+  display: grid;
+  gap: 15px;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto 40px auto;
+}
+
+/* linhas específicas para PG3 */
+.linhaPG3 {
+  display: grid;
+  gap: 15px;
+}
+
+/* 2 colunas e 3 colunas (nomes PG3) */
+.linha-2colsPG3 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.linha-3colsPG3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/* ===== ITENS GALERIA PG3 ===== */
+.galleryItemPG3 {
+  position: relative;
+  height: 300px;
+  background: linear-gradient(180deg, rgba(42, 42, 42, 0.9), rgba(12, 12, 12, 0.9));
+  border: 1px solid rgba(80, 80, 80, 0.5);
+  border-radius: 15px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  min-height: 120px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.galleryItemPG3:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.7);
+}
+
+/* imagem de fundo da galleryItem (cobre todo o bloco) */
+.galleryItemPG3 img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+  opacity: 0.8;
+}
+
+/* conteúdo sobreposto (gradient e texto) */
+.galleryContentPG3 {
+  position: relative;
+  z-index: 2;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding: 5px;
+  /* espaço interno para o texto */
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  text-align: center;
+}
+
+.galleryContentPG3 p {
+  font-size: 1.2em;
+  margin-top: 5%;
+  text-align: center;
   color: #fff;
 }
 
-/* Ícone no topo */
-nav.icon {
+#btn3 {
+  width: 50%;
+  margin: auto;
+}
+
+/* ===== RESPONSIVIDADE ===== */
+@media (max-width: 1024px) {
+  #paiPG1 {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .infoTextPG1 {
+    align-items: center;
+    padding: 40px 0;
+  }
+}
+
+@media (max-width: 900px) {
+  .linha-3colsPG3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: clamp(1.8rem, 5vw, 2.5rem);
+  }
+
+  p {
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
+  }
+
+  .containerPG2 {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cardPG2 {
+    width: 100%;
+    max-width: 320px;
+  }
+}
+
+@media (max-width: 600px) {
+
+  .linha-2colsPG3,
+  .linha-3colsPG3 {
+    grid-template-columns: 1fr;
+  }
+
+  .galleryContentPG3 p {
+    font-size: 0.8em;
+  }
+}
+
+/* ´P4 */
+
+.wrap-blocos {
+  max-width: 800px;
+  margin: 0 auto;
+
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* Blocos individuais */
+.bloco-item {
+  background-color: #2f2f2f;
+  color: #fff;
+  border-radius: 8px;
+  padding: 16px;
   display: flex;
-  justify-content: flex-end;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 8px;
+  min-height: 100px;
+  /* proporcional ao layout do Figma */
+}
+
+.bloco-item h2 {
+  font-size: 1rem;
+  display: flex;
   align-items: center;
-  padding: 20px 40px;
-  height: 100px;
+  margin: 0;
 }
 
-nav.icon img {
-  width: 195px;
-  height: 40px;
-  object-fit: contain;
+.layout-blocos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
 }
 
-nav.infoTextPG1 {
-  position: absolute;
-  top: auto;          /* remove a posição fixa */
-  left: 317px;
-  margin-top: 600px;  /* empurra para baixo */
-  height: 236px;
-  opacity: 1;
+.bloco-item p {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.4;
 }
 
-/* Regras gerais */
-section {
-  display: flex;
-  justify-content: center;
-  margin-top: 300px;
+.icon-bloco {
+  width: 28px;
+  height: 28px;
+  margin-right: 8px;
 }
 
-/* Imagem da primeira seção */
-.infoTextPG1 img {
-  height: 236px;
-  object-fit: contain;
+@media (max-width: 640px) {
+  .wrap-blocos {
+    grid-template-columns: 1fr;
+    width: 90%;
+  }
 }
-
-/* Imagem da segunda seção */
-.infoTextPG2, .elion, .infoTextPG3 img {
-  height: 180px; /* Exemplo — cada uma pode ter seu próprio valor */
-  object-fit: contain;
-}
-
-/* Imagem da terceira seção */
-.cardsInfo img {
-  height: 220px;
-  object-fit: contain;
-  margin: 10px;
-
-}
-
-/* Imagem da terceira seção */
-section.IconPG2 {
-  display: flex;
-  justify-content: center;
-  margin-top: 300px; /* segue sua lógica atual */
-}
-
-section.IconPG2 img {
-  width: 100%;
-  height: auto;
-  object-fit: contain;
-  opacity: 1;
-}
-/* Imagem da terceira seção */
-section.menu {
-  height: 200vh; /* Exemplo — cada uma pode ter seu próprio valor */
-  object-fit: contain;
-}
-/* Imagem da terceira seção */
-section.menu2 {
-  height: 150vh; /* Exemplo — cada uma pode ter seu próprio valor */
-  object-fit: contain;
-  margin-top:25px ;
-
-}
-
-section.cardsInfo2 {
-  height: 100%; /* Exemplo — cada uma pode ter seu próprio valor */
-  object-fit: contain;
-}
-
-section.group {
-  height: 90vh; /* Exemplo — cada uma pode ter seu próprio valor */
-  object-fit: contain;
-}
-section.frame {
-  height: 80vh; /* Exemplo — cada uma pode ter seu próprio valor */
-  object-fit: contain;
-}
-section.frame img{
-  height: 70%;
-}
-
-.gap{
-  width: 1px;
-
-}
-
