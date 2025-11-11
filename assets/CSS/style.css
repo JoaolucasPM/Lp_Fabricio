@@ -10,9 +10,7 @@
 /* ===== BODY ===== */
 body {
   font-family: 'Aeonik', sans-serif;
-  background:
-    linear-gradient(179deg, rgba(0, 0, 0, 0.3) 3.38%, #141414 99.16%),
-    url('../IMG/UC_fundo.jpg') center 17% / cover no-repeat fixed;
+  background: linear-gradient(to right, #000000, #141414);
   min-height: 100vh;
   color: #fff;
   display: flex;
@@ -22,7 +20,17 @@ body {
 }
 
 /* ===== TEXTOS ===== */
-h1, h2, p {
+#colorTextPG4_P4 {
+  background: none;
+  color: #000000 !important; /* Força a cor preta */
+  -webkit-text-fill-color: #000000 !important; /* Sobrescreve o gradiente */
+  -webkit-background-clip: initial; /* Remove o efeito de gradiente */
+}
+
+/* Regras gerais para h1, h2, p (exceto o #colorTextPG4_P4) */
+h1,
+h2,
+p {
   font-weight: 400;
   background: linear-gradient(to right, #fff, #999);
   -webkit-background-clip: text;
@@ -54,7 +62,8 @@ img {
 }
 
 /* ===== BOTÃO ===== */
-button, .hero-content .cta {
+button,
+.hero-content .cta {
   background: linear-gradient(to right, #d1ad6d, #ffc45c);
   color: #121212;
   border: none;
@@ -66,7 +75,8 @@ button, .hero-content .cta {
   transition: background 0.3s;
 }
 
-button:hover, .hero-content .cta:hover {
+button:hover,
+.hero-content .cta:hover {
   background: linear-gradient(to right, #ffc45c, #d1ad6d);
 }
 
@@ -82,6 +92,7 @@ button:hover, .hero-content .cta:hover {
 }
 
 .infoTextPG1 {
+  background: linear-gradient(179deg, rgba(0, 0, 0, 0.3) 3.38%, #141414 99.16%), url('../IMG/UC_fundo.jpg') center 17% / cover no-repeat fixed;
   display: flex;
   justify-content: center;
   align-items: flex-end;
@@ -122,10 +133,11 @@ button:hover, .hero-content .cta:hover {
   width: 90%;
   max-width: 1100px;
   margin: 0 auto;
+  padding-bottom: 70px;
 }
 
 .cardPG2_P2 {
-  flex: 1 1 250px;
+  flex: 1 1 50px;
   background: linear-gradient(180deg, #2a2a2a 0%, #0c0c0c 100%);
   opacity: 0.7;
   border: 1px solid #505050;
@@ -143,17 +155,18 @@ button:hover, .hero-content .cta:hover {
 }
 
 .imgBoxPG2_P2 img {
-  max-width: 90px;
+  max-width: 59px;
 }
 
 .contentBoxPG2_P2 {
   text-align: center;
-  gap: 10px;
+  gap: 5px;
 }
 
 .contentBoxPG2_P2 h2 {
   font-size: 1.4em;
   letter-spacing: 2px;
+  padding-bottom: 10px;
 }
 
 .contentBoxPG2_P2 p {
@@ -222,6 +235,7 @@ button:hover, .hero-content .cta:hover {
 }
 
 .galleryItemPG3_P3 {
+  
   position: relative;
   height: 300px;
   background: linear-gradient(180deg, rgba(42, 42, 42, 0.9), rgba(12, 12, 12, 0.9));
@@ -253,19 +267,28 @@ button:hover, .hero-content .cta:hover {
 .galleryContentPG3_P3 {
   position: relative;
   z-index: 2;
-  height: 100px;
+  height: 100px; /* Altura fixa mantida */
   display: flex;
   justify-content: center;
-  align-items: flex-end;
+  align-items: flex-end; /* Mantém o texto na base */
   padding: 5px;
   background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
   backdrop-filter: blur(5px);
   text-align: center;
+  overflow: hidden; /* Esconde o texto que ultrapassa */
 }
 
 .galleryContentPG3_P3 p {
   font-size: 1.2em;
+  text-align: start; /* Alinha o texto à esquerda */
   color: #fff;
+  display: -webkit-box; /* Suporte para limitar linhas */
+  -webkit-line-clamp: 3; /* Limita a 3 linhas */
+  -webkit-box-orient: vertical; /* Orientação vertical */
+  overflow: hidden; /* Esconde o excesso */
+  text-overflow: ellipsis; /* Adiciona "..." se o texto for cortado */
+  width: 100%; /* Garante que o texto ocupe o contêiner */
+  margin: 0; /* Remove margens padrão */
 }
 
 #btn3_P3 {
@@ -274,34 +297,50 @@ button:hover, .hero-content .cta:hover {
 }
 
 /* ===== PÁGINA 4 ===== */
-.wrap-blocos_P4 { 
+.wrap-blocos_P4 {
   max-width: 800px;
   margin: 0 auto;
   padding: 20px;
   border-radius: 10px;
   display: grid;
   gap: 20px;
-  grid-template-columns: repeat(2, 1fr); /* 2 colunas iguais */
-  grid-auto-rows: auto; /* cada linha se ajusta à altura do conteúdo */
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: auto;
 }
 
 .imgBoxPG4_P4 img {
   max-width: 90px;
 }
 
+.colorPG4_P4 {
+  background-color: rgba(209, 173, 109, 1);
+  min-height: 100vh;
+}
 
 .infoTextPG4_P4 {
-
   display: flex;
   justify-content: center;
   align-items: flex-start;
 }
 
-#caixaPG4_P4{
+#caixaPG4_P4 {
   text-align: center;
 }
 
-#caixaPG4_P4 h1{
+.bloco-item_P4:hover{
+
+  transform: translateY(-3px);
+  opacity: 0.90;
+}
+
+
+#colorTextPG4_P4 {
+  color: #000000 !important;
+  -webkit-text-fill-color: #000000 !important;
+  -webkit-background-clip: initial;
+}
+
+#caixaPG4_P4 h1 {
   padding-bottom: 20px;
   margin: auto;
   font-size: clamp(1.8rem, 4vw, 2.5rem);
@@ -310,13 +349,14 @@ button:hover, .hero-content .cta:hover {
 
 #caixaPG4_P4 p {
   padding-bottom: 50px;
-  width: 60%;
+  width: 70%;
   margin: auto;
   font-size: clamp(1rem, 2vw, 1.1rem);
+  color: #000000;
 }
 
 .bloco-item_P4 {
-  background-color: #2f2f2f;
+  background: linear-gradient(to right, #1E1E1E 100%, #1D1D1D 100%);
   color: #fff;
   border-radius: 8px;
   padding: 16px;
@@ -348,19 +388,17 @@ button:hover, .hero-content .cta:hover {
   max-width: 90px;
 }
 
-
 .infoTextPG5_P5 {
-
   display: flex;
   justify-content: center;
   align-items: flex-start;
 }
 
-#caixaPG5_P5{
+#caixaPG5_P5 {
   text-align: center;
 }
 
-#caixaPG5_P5 h1{
+#caixaPG5_P5 h1 {
   padding-bottom: 20px;
   margin: auto;
   font-size: clamp(1.8rem, 4vw, 2.5rem);
@@ -374,8 +412,8 @@ button:hover, .hero-content .cta:hover {
   font-size: clamp(1rem, 2vw, 1.1rem);
 }
 
-
-.wrap-blocos_P5, .wrap-blocos_P6 {
+.wrap-blocos_P5,
+.wrap-blocos_P6 {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -439,11 +477,16 @@ button:hover, .hero-content .cta:hover {
   width: clamp(280px, 40vw, 520px);
 }
 
+
+
 /* ===== RESPONSIVIDADE ===== */
 @media (max-width: 1024px) {
   #paiPG1 {
     grid-template-columns: 1fr;
     text-align: center;
+  }
+  .logoPG3_P3 > IMG {
+    display: block;
   }
 
   .infoTextPG1 {
@@ -465,6 +508,10 @@ button:hover, .hero-content .cta:hover {
 
   .hero-content {
     align-items: center;
+  }
+
+  .decorationPG3_P3{
+    display: none;
   }
 }
 
@@ -492,7 +539,8 @@ button:hover, .hero-content .cta:hover {
 }
 
 @media (max-width: 600px) {
-  .linha-2colsPG3_P3, .linha-3colsPG3_P3 {
+  .linha-2colsPG3_P3,
+  .linha-3colsPG3_P3 {
     grid-template-columns: 1fr;
   }
 
