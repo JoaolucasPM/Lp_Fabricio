@@ -39,10 +39,6 @@ p {
   line-height: 1.5;
 }
 
-#caixaPG1B p, #caixaPG2 p {
-  padding-bottom: 20px;
-}
-
 /* ===== IMAGENS ===== */
 img {
   max-width: 100%;
@@ -53,7 +49,7 @@ img {
   width: clamp(200px, 40vw, 520px);
 }
 
-.imgPG2 {
+.imgPG2_P2 {
   width: clamp(80px, 12vw, 130px);
 }
 
@@ -94,31 +90,31 @@ button:hover, .hero-content .cta:hover {
 }
 
 /* ===== PÁGINA 2 ===== */
-.infoTextPG2 {
+.infoTextPG2_P2 {
   display: flex;
   justify-content: center;
   align-items: flex-start;
 }
 
-#caixaPG2 {
+#caixaPG2_P2 {
   text-align: center;
 }
 
-#caixaPG2 h1 {
+#caixaPG2_P2 h1 {
   padding-bottom: 20px;
   margin: auto;
   font-size: clamp(1.8rem, 4vw, 2.5rem);
   width: 70%;
 }
 
-#caixaPG2 p {
+#caixaPG2_P2 p {
   padding-bottom: 50px;
   margin: auto;
   font-size: clamp(1rem, 2vw, 1.1rem);
 }
 
 /* ===== CARDS PG2 ===== */
-.containerPG2 {
+.containerPG2_P2 {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -128,7 +124,7 @@ button:hover, .hero-content .cta:hover {
   margin: 0 auto;
 }
 
-.cardPG2 {
+.cardPG2_P2 {
   flex: 1 1 250px;
   background: linear-gradient(180deg, #2a2a2a 0%, #0c0c0c 100%);
   opacity: 0.7;
@@ -141,32 +137,32 @@ button:hover, .hero-content .cta:hover {
   transition: transform 0.3s ease;
 }
 
-.cardPG2:hover {
+.cardPG2_P2:hover {
   transform: translateY(-8px);
   opacity: 0.85;
 }
 
-.imgBoxPG2 img {
+.imgBoxPG2_P2 img {
   max-width: 90px;
 }
 
-.contentBoxPG2 {
+.contentBoxPG2_P2 {
   text-align: center;
   gap: 10px;
 }
 
-.contentBoxPG2 h2 {
+.contentBoxPG2_P2 h2 {
   font-size: 1.4em;
   letter-spacing: 2px;
 }
 
-.contentBoxPG2 p {
+.contentBoxPG2_P2 p {
   font-size: 0.95em;
   line-height: 1.4;
 }
 
 /* ===== PÁGINA 3 ===== */
-.infoTextPG3 {
+.infoTextPG3_P3 {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -175,30 +171,30 @@ button:hover, .hero-content .cta:hover {
   position: relative;
 }
 
-.containerPG3 {
+.containerPG3_P3 {
   text-align: left;
   max-width: 800px;
   padding: 5% 20px 0;
 }
 
-.containerPG3 > h1 {
+.containerPG3_P3 > h1 {
   font-size: 2.7rem;
   padding-bottom: 20px;
 }
 
-.containerPG3 > p {
+.containerPG3_P3 > p {
   font-size: 1.2rem;
   padding-bottom: 10px;
 }
 
-.decorationPG3 {
+.decorationPG3_P3 {
   position: absolute;
   right: 5px;
   top: 50%;
   transform: translateY(-50%);
 }
 
-.decorationPG3 img {
+.decorationPG3_P3 img {
   max-height: 20vh;
   object-fit: contain;
 }
@@ -212,20 +208,20 @@ button:hover, .hero-content .cta:hover {
   margin: 0 auto 40px;
 }
 
-.linhaPG3 {
+.linhaPG3_P3 {
   display: grid;
   gap: 15px;
 }
 
-.linha-2colsPG3 {
+.linha-2colsPG3_P3 {
   grid-template-columns: repeat(2, 1fr);
 }
 
-.linha-3colsPG3 {
+.linha-3colsPG3_P3 {
   grid-template-columns: repeat(3, 1fr);
 }
 
-.galleryItemPG3 {
+.galleryItemPG3_P3 {
   position: relative;
   height: 300px;
   background: linear-gradient(180deg, rgba(42, 42, 42, 0.9), rgba(12, 12, 12, 0.9));
@@ -239,12 +235,12 @@ button:hover, .hero-content .cta:hover {
   justify-content: flex-end;
 }
 
-.galleryItemPG3:hover {
+.galleryItemPG3_P3:hover {
   transform: translateY(-4px);
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.7);
 }
 
-.galleryItemPG3 img {
+.galleryItemPG3_P3 img {
   position: absolute;
   inset: 0;
   width: 100%;
@@ -254,7 +250,7 @@ button:hover, .hero-content .cta:hover {
   opacity: 0.8;
 }
 
-.galleryContentPG3 {
+.galleryContentPG3_P3 {
   position: relative;
   z-index: 2;
   height: 100px;
@@ -267,28 +263,59 @@ button:hover, .hero-content .cta:hover {
   text-align: center;
 }
 
-.galleryContentPG3 p {
+.galleryContentPG3_P3 p {
   font-size: 1.2em;
   color: #fff;
 }
 
-#btn3 {
+#btn3_P3 {
   width: 50%;
   margin: auto;
 }
 
 /* ===== PÁGINA 4 ===== */
-.wrap-blocos {
+.wrap-blocos_P4 { 
   max-width: 800px;
   margin: 0 auto;
   padding: 20px;
   border-radius: 10px;
   display: grid;
   gap: 20px;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, 1fr); /* 2 colunas iguais */
+  grid-auto-rows: auto; /* cada linha se ajusta à altura do conteúdo */
 }
 
-.bloco-item {
+.imgBoxPG4_P4 img {
+  max-width: 90px;
+}
+
+
+.infoTextPG4_P4 {
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+#caixaPG4_P4{
+  text-align: center;
+}
+
+#caixaPG4_P4 h1{
+  padding-bottom: 20px;
+  margin: auto;
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  width: 70%;
+}
+
+#caixaPG4_P4 p {
+  padding-bottom: 50px;
+  width: 60%;
+  margin: auto;
+  font-size: clamp(1rem, 2vw, 1.1rem);
+}
+
+.bloco-item_P4 {
   background-color: #2f2f2f;
   color: #fff;
   border-radius: 8px;
@@ -299,24 +326,55 @@ button:hover, .hero-content .cta:hover {
   min-height: 100px;
 }
 
-.bloco-item h2 {
+.bloco-item_P4 h2 {
   font-size: 1rem;
   display: flex;
   align-items: center;
 }
 
-.bloco-item p {
+.bloco-item_P4 p {
   font-size: 0.9rem;
   line-height: 1.4;
 }
 
-.icon-bloco {
+.icon-bloco_P4 {
   width: 28px;
   height: 28px;
   margin-right: 8px;
 }
 
 /* ===== PÁGINAS 5 e 6 ===== */
+.imgBoxPG5_P5 img {
+  max-width: 90px;
+}
+
+
+.infoTextPG5_P5 {
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+#caixaPG5_P5{
+  text-align: center;
+}
+
+#caixaPG5_P5 h1{
+  padding-bottom: 20px;
+  margin: auto;
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  width: 70%;
+}
+
+#caixaPG5_P5 p {
+  padding-bottom: 50px;
+  width: 60%;
+  margin: auto;
+  font-size: clamp(1rem, 2vw, 1.1rem);
+}
+
+
 .wrap-blocos_P5, .wrap-blocos_P6 {
   display: flex;
   justify-content: center;
@@ -395,7 +453,7 @@ button:hover, .hero-content .cta:hover {
 }
 
 @media (max-width: 900px) {
-  .linha-3colsPG3 {
+  .linha-3colsPG3_P3 {
     grid-template-columns: repeat(2, 1fr);
   }
 
@@ -415,30 +473,30 @@ button:hover, .hero-content .cta:hover {
     font-size: clamp(1.8rem, 5vw, 2.5rem);
   }
 
-  .containerPG2 {
+  .containerPG2_P2 {
     flex-direction: column;
     align-items: center;
   }
 
-  .cardPG2 {
+  .cardPG2_P2 {
     width: 100%;
     max-width: 320px;
   }
 }
 
 @media (max-width: 640px) {
-  .wrap-blocos {
+  .wrap-blocos_P4 {
     grid-template-columns: 1fr;
     width: 90%;
   }
 }
 
 @media (max-width: 600px) {
-  .linha-2colsPG3, .linha-3colsPG3 {
+  .linha-2colsPG3_P3, .linha-3colsPG3_P3 {
     grid-template-columns: 1fr;
   }
 
-  .galleryContentPG3 p {
+  .galleryContentPG3_P3 p {
     font-size: 0.8em;
   }
 
