@@ -22,9 +22,7 @@ body {
 }
 
 /* ===== TEXTOS ===== */
-h1,
-h2,
-p {
+h1, h2, p {
   font-weight: 400;
   background: linear-gradient(to right, #fff, #999);
   -webkit-background-clip: text;
@@ -41,25 +39,26 @@ p {
   line-height: 1.5;
 }
 
-/* ajuste específico do texto interno da caixa PG1/PG2 */
-#caixaPG1B p,
-#caixaPG2 p {
+#caixaPG1B p, #caixaPG2 p {
   padding-bottom: 20px;
 }
 
 /* ===== IMAGENS ===== */
-img.imgPG1 {
-  width: clamp(200px, 40vw, 520px);
+img {
+  max-width: 100%;
   height: auto;
 }
 
-img.imgPG2 {
+.imgPG1 {
+  width: clamp(200px, 40vw, 520px);
+}
+
+.imgPG2 {
   width: clamp(80px, 12vw, 130px);
-  height: auto;
 }
 
 /* ===== BOTÃO ===== */
-button {
+button, .hero-content .cta {
   background: linear-gradient(to right, #d1ad6d, #ffc45c);
   color: #121212;
   border: none;
@@ -71,12 +70,11 @@ button {
   transition: background 0.3s;
 }
 
-button:hover {
+button:hover, .hero-content .cta:hover {
   background: linear-gradient(to right, #ffc45c, #d1ad6d);
 }
 
-/* ===== LAYOUT PG1 ===== */
-/* paiPG1 (antes #pai) */
+/* ===== PÁGINA 1 ===== */
 #paiPG1 {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -95,26 +93,14 @@ button:hover {
   padding-bottom: 60px;
 }
 
-/* Caixa PG1 específicas */
-#caixaPG1A img.imgPG1 {
-  display: block;
-  max-width: 100%;
-}
-
-#caixaPG1B {
-  /* mantém comportamento idêntico */
-}
-
-/* ===== LAYOUT PG2 ===== */
+/* ===== PÁGINA 2 ===== */
 .infoTextPG2 {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  margin: 0;
 }
 
-/* caixaPG2 */
-#paiPG2 #caixaPG2 {
+#caixaPG2 {
   text-align: center;
 }
 
@@ -131,12 +117,10 @@ button:hover {
   font-size: clamp(1rem, 2vw, 1.1rem);
 }
 
-/* ===== CARDS (PÁGINA 2) ===== */
-/* containerPG2 (antes .container) */
+/* ===== CARDS PG2 ===== */
 .containerPG2 {
   display: flex;
   justify-content: center;
-  align-items: stretch;
   flex-wrap: wrap;
   gap: 20px;
   width: 90%;
@@ -144,7 +128,6 @@ button:hover {
   margin: 0 auto;
 }
 
-/* cardPG2 (antes .card) */
 .cardPG2 {
   flex: 1 1 250px;
   background: linear-gradient(180deg, #2a2a2a 0%, #0c0c0c 100%);
@@ -154,7 +137,6 @@ button:hover {
   padding: 40px 30px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   align-items: center;
   transition: transform 0.3s ease;
 }
@@ -164,22 +146,11 @@ button:hover {
   opacity: 0.85;
 }
 
-.imgBoxPG2 {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 .imgBoxPG2 img {
   max-width: 90px;
-  height: auto;
 }
 
 .contentBoxPG2 {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   text-align: center;
   gap: 10px;
 }
@@ -187,7 +158,6 @@ button:hover {
 .contentBoxPG2 h2 {
   font-size: 1.4em;
   letter-spacing: 2px;
-  color: white;
 }
 
 .contentBoxPG2 p {
@@ -195,79 +165,58 @@ button:hover {
   line-height: 1.4;
 }
 
-/* ===== PÁGINA 3 - topo ===== */
+/* ===== PÁGINA 3 ===== */
 .infoTextPG3 {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  align-items: flex-start;
   height: 50vh;
-  /* mantém tela cheia */
-  padding: 0;
-  /* remove o padding superior */
-  margin: 0;
-  /* remove margens que causam scroll */
   overflow: hidden;
-  /* impede o scroll vertical extra */
   position: relative;
-  /* mantém a posição para .decorationPG3 */
 }
 
 .containerPG3 {
   text-align: left;
   max-width: 800px;
-  position: relative;
   padding: 5% 20px 0;
-  /* aplica espaçamento interno sem expandir altura total */
 }
 
-.logoPG3 {
-  font-size: 14px;
-  color: #ccc;
-  margin-bottom: 20px;
-  font-family: 'Aeonik', sans-serif;
-}
-
-.containerPG3>h1 {
+.containerPG3 > h1 {
   font-size: 2.7rem;
   padding-bottom: 20px;
 }
 
-.containerPG3>p {
+.containerPG3 > p {
   font-size: 1.2rem;
   padding-bottom: 10px;
 }
 
-/* decorationPG3 */
 .decorationPG3 {
   position: absolute;
-  right: 100px;
-  top: 25%;
+  right: 5px;
+  top: 50%;
   transform: translateY(-50%);
 }
 
 .decorationPG3 img {
-  max-height: 60vh;
+  max-height: 20vh;
   object-fit: contain;
 }
 
 /* ===== GALERIA (PÁGINA 3) ===== */
-/* containerGaleriaPG3 (antes .container3 or .container) */
 .containerGaleriaPG3 {
   display: grid;
   gap: 15px;
   width: 100%;
   max-width: 1000px;
-  margin: 0 auto 40px auto;
+  margin: 0 auto 40px;
 }
 
-/* linhas específicas para PG3 */
 .linhaPG3 {
   display: grid;
   gap: 15px;
 }
 
-/* 2 colunas e 3 colunas (nomes PG3) */
 .linha-2colsPG3 {
   grid-template-columns: repeat(2, 1fr);
 }
@@ -276,7 +225,6 @@ button:hover {
   grid-template-columns: repeat(3, 1fr);
 }
 
-/* ===== ITENS GALERIA PG3 ===== */
 .galleryItemPG3 {
   position: relative;
   height: 300px;
@@ -285,7 +233,6 @@ button:hover {
   border-radius: 15px;
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  min-height: 120px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
   display: flex;
   flex-direction: column;
@@ -297,11 +244,9 @@ button:hover {
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.7);
 }
 
-/* imagem de fundo da galleryItem (cobre todo o bloco) */
 .galleryItemPG3 img {
   position: absolute;
-  top: 0;
-  left: 0;
+  inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -309,7 +254,6 @@ button:hover {
   opacity: 0.8;
 }
 
-/* conteúdo sobreposto (gradient e texto) */
 .galleryContentPG3 {
   position: relative;
   z-index: 2;
@@ -318,23 +262,123 @@ button:hover {
   justify-content: center;
   align-items: flex-end;
   padding: 5px;
-  /* espaço interno para o texto */
   background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
   backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
   text-align: center;
 }
 
 .galleryContentPG3 p {
   font-size: 1.2em;
-  margin-top: 5%;
-  text-align: center;
   color: #fff;
 }
 
 #btn3 {
   width: 50%;
   margin: auto;
+}
+
+/* ===== PÁGINA 4 ===== */
+.wrap-blocos {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 10px;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr 1fr;
+}
+
+.bloco-item {
+  background-color: #2f2f2f;
+  color: #fff;
+  border-radius: 8px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-height: 100px;
+}
+
+.bloco-item h2 {
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.bloco-item p {
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.icon-bloco {
+  width: 28px;
+  height: 28px;
+  margin-right: 8px;
+}
+
+/* ===== PÁGINAS 5 e 6 ===== */
+.wrap-blocos_P5, .wrap-blocos_P6 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrap-blocos_P5 > img {
+  width: 70%;
+}
+
+.wrap-blocos_P6 > img {
+  width: 60%;
+  height: auto;
+}
+
+/* ===== PÁGINA 7 ===== */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 80px 10%;
+  min-height: 100vh;
+  background: linear-gradient(179deg, rgba(0, 0, 0, 0.5) 3.38%, #141414 99.16%);
+  color: #fff;
+  flex-wrap: wrap;
+}
+
+.hero-content {
+  flex: 1 1 480px;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.hero-content .tag img {
+  width: 90px;
+  margin-bottom: 10px;
+}
+
+.hero-content h1 {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 700;
+  background: linear-gradient(to right, #ffffff, #d8d8d8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-content p {
+  font-size: clamp(1rem, 2vw, 1.3rem);
+  line-height: 1.5;
+  color: #ccc;
+}
+
+.hero-image {
+  flex: 1 1 380px;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-image img {
+  width: clamp(280px, 40vw, 520px);
 }
 
 /* ===== RESPONSIVIDADE ===== */
@@ -354,15 +398,21 @@ button:hover {
   .linha-3colsPG3 {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .hero {
+    flex-direction: column-reverse;
+    text-align: center;
+    padding: 60px 5%;
+  }
+
+  .hero-content {
+    align-items: center;
+  }
 }
 
 @media (max-width: 768px) {
   h1 {
     font-size: clamp(1.8rem, 5vw, 2.5rem);
-  }
-
-  p {
-    font-size: clamp(1rem, 2.5vw, 1.2rem);
   }
 
   .containerPG2 {
@@ -376,70 +426,23 @@ button:hover {
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 640px) {
+  .wrap-blocos {
+    grid-template-columns: 1fr;
+    width: 90%;
+  }
+}
 
-  .linha-2colsPG3,
-  .linha-3colsPG3 {
+@media (max-width: 600px) {
+  .linha-2colsPG3, .linha-3colsPG3 {
     grid-template-columns: 1fr;
   }
 
   .galleryContentPG3 p {
     font-size: 0.8em;
   }
-}
 
-/* ´P4 */
-
-.wrap-blocos {
-  max-width: 800px;
-  margin: 0 auto;
-
-  padding: 20px;
-  border-radius: 10px;
-}
-
-/* Blocos individuais */
-.bloco-item {
-  background-color: #2f2f2f;
-  color: #fff;
-  border-radius: 8px;
-  padding: 16px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  gap: 8px;
-  min-height: 100px;
-  /* proporcional ao layout do Figma */
-}
-
-.bloco-item h2 {
-  font-size: 1rem;
-  display: flex;
-  align-items: center;
-  margin: 0;
-}
-
-.layout-blocos {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-}
-
-.bloco-item p {
-  margin: 0;
-  font-size: 0.9rem;
-  line-height: 1.4;
-}
-
-.icon-bloco {
-  width: 28px;
-  height: 28px;
-  margin-right: 8px;
-}
-
-@media (max-width: 640px) {
-  .wrap-blocos {
-    grid-template-columns: 1fr;
-    width: 90%;
+  .hero-content h1 {
+    font-size: clamp(2rem, 6vw, 3rem);
   }
 }
