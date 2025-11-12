@@ -180,24 +180,24 @@
 
       <div class="wrap-blocos_P4">
           <div class="bloco-item_P4">
-            <h2><img src="assets/IMG/UC_icon1P1.png" alt="" class="icon-bloco_P4"> O que você vai aprender?</h2>
+            <h2><img src="assets/IMG/UC_icon1P1.png" alt="" class="icon-bloco_P4"> O que vou aprender?</h2>
             <p>Prepare-se para acessar ao plano completo para atrair clientes, vender mais e viver exclusivamente do
               faturamento da sua loja.</p>
           </div>
 
           <div class="bloco-item_P4">
-            <h2><img src="assets/IMG/UC_icon2P2.png" alt="" class="icon-bloco_P4"> Estratégia que se mantém</h2>
-            <p>Você vai aprender como planejar, organizar e executar ações semanais que aumentam suas vendas.</p>
+            <h2><img src="assets/IMG/UC_icon2P2.png" alt="" class="icon-bloco_P4"> Identidade que conecta</h2>
+            <p>Você vai estruturar uma marca autêntica, forte e alinhada com sua essência, para que seu negócio não seja apenas mais um, mas o escolhido pelas pessoas certas.</p>
           </div>
 
           <div class="bloco-item_P4">
-            <h2><img src="assets/IMG/UC_icon3P4.png" alt="" class="icon-bloco_P4"> Identidade que conecta</h2>
-            <p>Você vai estruturar uma marca autêntica e alinhada com sua essência.</p>
+            <h2><img src="assets/IMG/UC_icon3P4.png" alt="" class="icon-bloco_P4"> Estratégia que se mantém</h2>
+            <p>  Você vai aprender como planejar, organizar e executar ações semanais que aumentam suas vendas e visibilidade, com clareza do que fazer, como fazer e quando fazer.</p>
           </div>
 
           <div class="bloco-item_P4">
             <h2><img src="assets/IMG/UC_icon4P4.png" alt="" class="icon-bloco_P4"> Posicionamento que vende</h2>
-            <p>Aprenda a apresentar seus produtos de forma irresistível.</p>
+            <p> Você vai aprender a apresentar seus produtos de forma irresistível — da vitrine ao digital — para que cada post, oferta ou exposição gere desejo e conversão.</p>
           </div>
         </div>
     </div>
@@ -224,8 +224,8 @@
     <div class="section">
       <section class="infoTextPG6_P6">
         <div class="wrap-blocos_P6">
-          <img src="assets/IMG/UC_mentor.png" alt="Imagem representando a evolução">
-        </div>
+          <img id='full' src="assets/IMG/UC_mentor.png" alt="Imagem representando a evolução">
+          </div>
       </section>
     </div>
 
@@ -239,23 +239,39 @@
           <p>Este é o seu convite para desbloquear padrões emocionais, assumir o próprio poder e viver com autenticidade e propósito.</p>
           <button class="cta">QUERO LIBERAR A MINHA TRANSFORMAÇÃO →</button>
         </div>
-
+        
         <div class="hero-image">
           <img src="assets/IMG/book_elion.png" alt="Notebook com logo Elion">
         </div>
+        <button id="btnTopo" title="Voltar ao topo">Voltar ao topo</button>
       </section>
     </div>
-
   </div>
 
   <!-- fullPage.js -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.25/fullpage.min.js"></script>
   <script>
-    new fullpage('#fullpage', {
-      autoScrolling: true,
-      navigation: true,
-      scrollHorizontally: false
-    });
+ new fullpage('#fullpage', {
+    autoScrolling: true,
+    navigation: true,
+    scrollHorizontally: false
+  });
+
+  // Mostrar o botão apenas quando não estiver na primeira seção
+  fullpage_api.setAllowScrolling(true);
+  document.addEventListener('scroll', () => {
+    const btn = document.getElementById('btnTopo');
+    if (fullpage_api.getActiveSection().index !== 0) {
+      btn.style.display = 'block';
+    } else {
+      btn.style.display = 'none';
+    }
+  });
+
+  // Função para voltar ao topo
+  document.getElementById('btnTopo').addEventListener('click', () => {
+    fullpage_api.moveTo(1);
+  });
   </script>
 
 </body>
