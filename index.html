@@ -34,7 +34,7 @@
                   <a href="#"><iconify-icon icon="hugeicons:brain-02" width="20" height="20"></iconify-icon>
                     Transformação que Começa Dentro</a>
                 </div>
-                <h1 class="display-4">Você não precisa repetir os ciclos.</h1>
+                <h1 class="display-1">Você não precisa repetir os ciclos.</h1>
               </div>
               <div class="right-side">
                 <p class="lead">A Mentoria com Fábio Gonçalves te guia para romper padrões emocionais, desbloquear sua
@@ -268,8 +268,8 @@
             </div>
 
           <h1>Acesso imediato à<br>sua nova vida.</h1>
-          <p>Saia do automático e desperte uma versão de si mesmo que você ainda não conheceu
-          Este é o seu convite para desbloquear padrões emocionais, assumir o próprio poder e viver com autenticidade
+          <p>Saia do automático e desperte uma versão de si mesmo que você ainda não  </p>
+          <p> Este é o seu convite para desbloquear padrões emocionais, assumir o próprio poder e viver com autenticidade
             e propósito.</p>
           <button class="cta">QUERO LIBERAR A MINHA TRANSFORMAÇÃO →</button>
         </div>
@@ -277,8 +277,8 @@
         <div class="hero-image">
           <img src="assets/IMG/book_elion.png" alt="Notebook com logo Elion">
         </div>
-        <button id="btnTopo" title="Voltar ao topo">Voltar ao topo</button>
       </section>
+      <button id="btnTopo" title="Voltar ao topo">Voltar ao topo</button>
     </div>
   </div>
 
@@ -287,8 +287,10 @@
   <script>
     new fullpage('#fullpage', {
       autoScrolling: true,
-      navigation: true,
-      scrollHorizontally: false
+      navigation: false,
+      scrollHorizontally: false,
+          scrollingSpeed: 1900, // tempo da animação (padrão é 700ms)
+    easingcss3: 'cubic-bezier(0.80, 0, 0.175, 1)', // transição suave e natural
     });
 
     // Mostrar o botão apenas quando não estiver na primeira seção
