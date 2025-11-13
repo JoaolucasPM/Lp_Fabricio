@@ -785,7 +785,7 @@ button:hover,
 
   .bg-image {
    
-    background: linear-gradient(179deg, rgba(0, 0, 0, 0.3) 3.38%, #141414 99.16%), url('/assets/IMG/HeroDESKTOP.png') center 17% / cover no-repeat fixed;
+    background: linear-gradient(179deg, rgba(0, 0, 0, 0.3) 3.38%, #141414 99.16%), url('https://github.com/JoaolucasPM/Lp_Fabricio/blob/main/assets/IMG/HeroDESKTOP.png') center 17% / cover no-repeat fixed;
   
   }
 
@@ -853,7 +853,7 @@ button:hover,
 
 @media (max-width: 768px) {
   .bg-image {
-  background: linear-gradient(179deg, rgba(0, 0, 0, 0.3) 3.38%, #141414 99.16%), url('/assets/IMG/HeroMobile.png') center 17% / cover no-repeat fixed;
+  background: linear-gradient(179deg, rgba(0, 0, 0, 0.3) 3.38%, #141414 99.16%), url('https://github.com/JoaolucasPM/Lp_Fabricio/blob/main/assets/IMG/HeroMobile.png') center 17% / cover no-repeat fixed;
   background-size: cover;
   height: 100vh;
   position: relative;
