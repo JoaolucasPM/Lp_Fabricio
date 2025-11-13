@@ -783,9 +783,10 @@ button:hover,
 
   } */
 
-  .infoTextPG1 {
-    background: url('assets/IMG/HeroMobile.png') cover no-repeat fixed;
-
+  .bg-image {
+   
+    background: linear-gradient(179deg, rgba(0, 0, 0, 0.3) 3.38%, #141414 99.16%), url('/assets/IMG/HeroDESKTOP.png') center 17% / cover no-repeat fixed;
+  
   }
 
   .wrap-blocos_P6 {
@@ -851,6 +852,13 @@ button:hover,
 }
 
 @media (max-width: 768px) {
+  .bg-image {
+  background: linear-gradient(179deg, rgba(0, 0, 0, 0.3) 3.38%, #141414 99.16%), url('/assets/IMG/HeroMobile.png') center 17% / cover no-repeat fixed;
+  background-size: cover;
+  height: 100vh;
+  position: relative;
+  color: white;
+}
   .hero-content h1 {
     text-align: center;
     font-size: clamp(2rem, 5vw, 4rem);
