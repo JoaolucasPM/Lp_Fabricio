@@ -747,6 +747,10 @@ button:hover,
   cursor: pointer;
 }
 
+.text-end img{
+  height: 40px;
+}
+
 
 
 /* ===== RESPONSIVIDADE ===== */
@@ -780,7 +784,7 @@ button:hover,
   } */
 
   .infoTextPG1 {
-    background: url('../IMG/HeroMobile.png') cover no-repeat fixed;
+    background: url('assets/IMG/HeroMobile.png') cover no-repeat fixed;
 
   }
 
