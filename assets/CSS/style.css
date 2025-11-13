@@ -93,6 +93,11 @@ button:hover,
 .hero-content .cta:hover {
   background: linear-gradient(to right, #ffc45c, #d1ad6d);
 }
+.textF > h1{
+  border: 1px solid green;
+  font-size: 1rem;
+}
+
 
 /* ===== PÁGINA 1 ===== */
 .bg-image {
@@ -196,7 +201,7 @@ button:hover,
   width: auto;
   box-sizing: border-box;
   font-size: 10px
-    /* 🔥 ajusta o tamanho automaticamente */
+
 }
 
 .links a iconify-icon {
@@ -856,7 +861,7 @@ button:hover,
 
 @media (max-width: 768px) {
   .bg-image {
-  background: linear-gradient(179deg, rgba(0, 0, 0, 0.3) 3.38%, #141414 99.16%), url('/assets/IMG/HeroMobile.png') center 17% / cover no-repeat fixed;
+  background: linear-gradient(179deg, rgba(0, 0, 0, 0.3) 3.38%, #141414 99.16%), url('https://github.com/JoaolucasPM/Lp_Fabricio/blob/main/assets/IMG/HeroMobile.png') center 17% / cover no-repeat fixed;
   background-size: cover;
   height: 100vh;
   position: relative;
