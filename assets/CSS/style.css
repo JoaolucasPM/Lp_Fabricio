@@ -786,10 +786,15 @@ button:hover,
 
   }
 
-  /*   #full {
-    display: none;
+    #full {
+    margin: auto;
+    width: 95%;
 
-  } */
+  }
+  #full1{
+        margin: auto;
+    width: 95%;
+  }
 
   .bg-image {
    
@@ -860,6 +865,16 @@ button:hover,
 }
 
 @media (max-width: 768px) {
+    #full1{
+        margin: auto;
+    width: 95%;
+  }
+
+      #full {
+    margin: auto;
+    width: 95%;
+
+  }
   .bg-image {
   background: linear-gradient(179deg, rgba(0, 0, 0, 0.3) 3.38%, #141414 99.16%), url('https://raw.githubusercontent.com/JoaolucasPM/Lp_Fabricio/main/assets/IMG/HeroMobile.png') center 17% / cover no-repeat fixed;
   background-size: cover;
