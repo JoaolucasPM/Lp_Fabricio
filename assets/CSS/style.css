@@ -55,6 +55,12 @@ img {
   height: auto;
 }
 
+.pe-3 {
+  position: absolute;
+  top: 40px;
+  right: 50px;
+}
+
 .imgPG1 {
   width: clamp(180px, 40vw, 520px);
   /* Ajuste para telas menores */
@@ -67,8 +73,9 @@ img {
 
 /* ===== BOTÃO ===== */
 button,
-.hero-content .cta {
-  background: linear-gradient(to right, #d1ad6d, #ffc45c);
+.hero-content .cta,
+.btn-custom {
+  background: linear-gradient(#d1ad6d, #ffc45c);
   color: #121212;
   border: none;
   border-radius: 8px;
@@ -114,15 +121,19 @@ button:hover,
   gap: 70px;
   /* Aumenta o espaço entre .left-side e .right-side */
 }
-.content-wrapper > * {
-  flex: 1; /* faz cada filho ocupar o mesmo espaço */
+
+.content-wrapper>* {
+  flex: 1;
+  /* faz cada filho ocupar o mesmo espaço */
 }
+
 .display-1 {
-  display: block;
   width: 100%;
   text-align: justify;
-  
+  text-justify: inter-word;
+
 }
+
 
 
 .left-side,
@@ -132,17 +143,16 @@ button:hover,
 
 .left-side {
   text-align: left;
-  
-  
+  width: 45%;
 }
+
 
 .right-side {
   text-align: justify;
 }
 
 .btn-custom {
-  background-color: #f4a261;
-  color: white;
+  color: #000000;
   border: none;
   padding: 10px 20px;
   display: inline-block;
@@ -154,8 +164,8 @@ button:hover,
   background-color: #e76f51;
 }
 
-.links {  
-  margin-bottom: 10%;
+.links {
+  margin-top: 3px;
   display: flex;
   flex-wrap: nowrap;
   gap: 10px;
@@ -178,16 +188,12 @@ button:hover,
   padding: 5px 10px;
   text-decoration: none;
   white-space: nowrap;
-  flex: auto ;
-  /* cada l ink ocupa metade da largura disponível */
+  flex: auto;
+  flex: 1;
   width: auto;
-  /* permite encolher corretamente */
   box-sizing: border-box;
-}
-
-
-.links a:hover {
-  background-color: #e76f51;
+  font-size: 10px
+    /* 🔥 ajusta o tamanho automaticamente */
 }
 
 .links a iconify-icon {
@@ -195,6 +201,7 @@ button:hover,
 }
 
 .lead {
+  padding: 1px;
   margin-bottom: 20px;
 }
 
@@ -719,15 +726,28 @@ button:hover,
 .hero-image img {
   width: clamp(200px, 40vw, 520px);
 }
-
-#btnTopo{
-  padding: 10px;
-  border: 1px solid green;
-  display: flex;
-  margin: auto;
-  justify-content: center;
-  
+.hero {
+  position: relative;
 }
+
+.hero-btn {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: fit-content;
+}
+
+#btnTopo {
+  padding: 10px 20px;
+  background: transparent;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+
 
 /* ===== RESPONSIVIDADE ===== */
 @media (max-width: 1024px) {
@@ -754,13 +774,13 @@ button:hover,
 
   }
 
-  #full {
+  /*   #full {
     display: none;
 
-  }
+  } */
 
   .infoTextPG1 {
-    background: linear-gradient(179deg, rgba(0, 0, 0, 0.3) 3.38%, #141414 99.16%), url('../IMG/HeroMobile.png') center 17% / cover no-repeat fixed;
+    background: url('../IMG/HeroMobile.png') cover no-repeat fixed;
 
   }
 
@@ -802,12 +822,13 @@ button:hover,
     margin: 20px;
 
   }
+
   .display-1 {
-  display: block;
-  width: 100%;
-  text-align: center;
-  
-}
+    display: block;
+    width: 100%;
+    text-align: center;
+
+  }
 
   .hero {
     flex-direction: column-reverse;
@@ -827,28 +848,30 @@ button:hover,
 
 @media (max-width: 768px) {
   .hero-content h1 {
-  text-align: center;
-  font-size: clamp(2rem, 5vw, 4rem);
-  /* Ajuste para responsividade */
-  font-weight: 700;
+    text-align: center;
+    font-size: clamp(2rem, 5vw, 4rem);
+    /* Ajuste para responsividade */
+    font-weight: 700;
 
-  background: linear-gradient(to right, #ffffff, #d8d8d8);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-.cta{
-  width: 80%;
-}
+    background: linear-gradient(to right, #ffffff, #d8d8d8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
 
-.hero-content p {
-  text-align: center;
-  /* Ajuste para responsividade */
-  color: #ccc;
-}
-  .content-wrapper{
+  .cta {
+    width: 80%;
+  }
+
+  .hero-content p {
+    text-align: center;
+    /* Ajuste para responsividade */
+    color: #ccc;
+  }
+
+  .content-wrapper {
     display: flex;
     margin-top: 70%;
-    
+
   }
 
   .links {
@@ -861,11 +884,11 @@ button:hover,
 
   .links a {
     font-size: 7px;
-     padding: 2px 5px;
+    padding: 2px 5px;
   }
-  
+
   .links a iconify-icon {
-  margin-right: 2px;
+    margin-right: 2px;
   }
 
   .content-wrapper {
@@ -950,6 +973,12 @@ button:hover,
   .linha-3colsPG3_P3 {
     grid-template-columns: 1fr;
     /* Empilha em 1 coluna */
+  }
+
+  .pe-3 {
+    display: flex;
+    position: absolute;
+    right: 5%;
   }
 
   .galleryItemPG3_P3 {
