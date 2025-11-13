@@ -9,7 +9,7 @@
 
 /* ===== BODY ===== */
 body {
-  font-family: 'Aeonik', sans-serif;
+  font-family: 'Aeonik', Poppins;
   background: linear-gradient(to right, #000000, #141414);
   min-height: 100vh;
   color: #fff;
@@ -129,9 +129,12 @@ button:hover,
 
 .display-1 {
   width: 100%;
-  text-align: justify;
-  text-justify: inter-word;
-
+  display: block;
+  text-align: start;
+  line-height: 1;
+  align-items: stretch;
+  margin: 0;
+  padding: 0;
 }
 
 
@@ -785,7 +788,7 @@ button:hover,
 
   .bg-image {
    
-    background: linear-gradient(179deg, rgba(0, 0, 0, 0.3) 3.38%, #141414 99.16%), url('/assets/IMG/HeroDESKTOP.png') center 17% / cover no-repeat fixed;
+    background: linear-gradient(179deg, rgba(0, 0, 0, 0.3) 3.38%, #141414 99.16%), url('./assets/IMG/HeroDESKTOP.png') center 17% / cover no-repeat fixed;
   
   }
 
