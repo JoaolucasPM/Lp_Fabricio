@@ -124,12 +124,12 @@ button:hover,
   justify-content: space-between;
   align-items: stretch;
   gap: 70px;
-  /* Aumenta o espaço entre .left-side e .right-side */
+
 }
 
 .content-wrapper>* {
   flex: 1;
-  /* faz cada filho ocupar o mesmo espaço */
+  
 }
 
 .display-1 {
